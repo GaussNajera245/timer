@@ -33,36 +33,37 @@
   <div id="nemo">
     <v-app>
       <v-content>
-        <v-row justify='center'  >
-          <v-col cols="12" sm="6">
+        <v-container>
+          <v-row justify='center'  >
+            <v-col cols="12" sm="6">
 
-            <v-text-field 
-              class="centered-input"
-              v-model='message' 
-              label="Solo" 
-              solo 
-              readonly
-              >
-            </v-text-field>
+              <v-text-field 
+                class="centered-input"
+                v-model='message' 
+                label="Solo" 
+                solo 
+                readonly
+                >
+              </v-text-field>
 
-          </v-col>
-        </v-row>
-
-
-        <v-layout >
-
-          <v-flex justify-center>
-            <v-btn class="ma-2" color="indigo" width="170" height="70" v-on:click="start" outlined absolute>[ Start ]</v-btn>
-
-          </v-flex>
-          <v-flex >
-            <v-btn class="ma-2" color="red" width="170" height="70" v-on:click="stop" outlined absolute>[ Stop ]</v-btn>
-
-          </v-flex>
-
-        </v-layout>
+            </v-col>
+          </v-row>
 
 
+          <v-layout >
+
+            <v-flex justify-center>
+              <v-btn class="ma-2" color="indigo" width="170" height="70" v-on:click="start" outlined absolute>[ Start ]</v-btn>
+
+            </v-flex>
+            <v-flex >
+              <v-btn class="ma-2" color="red" width="170" height="70" v-on:click="stop" outlined absolute>[ Stop ]</v-btn>
+
+            </v-flex>
+
+          </v-layout>
+
+      </v-container>
       </v-content>
     </v-app>
   </div>
