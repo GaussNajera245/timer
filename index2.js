@@ -1,4 +1,5 @@
 var x;
+let lock = true;
 
 var newest = new Vue({
     el: '#nemo',
@@ -8,10 +9,12 @@ var newest = new Vue({
     },
     methods: {
         start: function () {
-            check();
+           if(lock){  check();  }
+           lock = false;
         },
         stop: function () {
             clearInterval(x);
+            lock = true;
         }
     }
 }); 
