@@ -7,65 +7,65 @@
   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   <style>
-      .v-input input {
-        max-height: 200px;
-        display: flex!important;
-       align-items: center!important
-      }
-      
-      .centered-input input {
-        text-align: center;
-        font-size: 11em;  
-        height: 200px;
-      }
+    .v-input input {
+      max-height: 200px;
+      /* display: flex !important;
+      align-items: center !important */
+    }
 
-      .v-btn {
-        font-size: 1rem!important;
-      }
+    .centered-input input {
+      text-align: center;
+      font-size: 11em;
+      height: 200px;
+    }
 
+    .v-btn {
+      font-size: 1.5rem !important;
+    }
+
+    .start-btn {
+      font-size: 2.5rem !important;
+    }
+
+    
   </style>
 
 </head>
 
 <body>
-  <div style="height: 22vh"></div>
-
   <div id="nemo">
     <v-app>
       <v-content>
-        <v-container>
-          <v-row justify='center'  >
-            <v-col cols="12" sm="6">
+        <v-container  style="min-width:500px; height: 100%; width: 100%; " >
 
-              <v-text-field 
-                class="centered-input"
-                v-model='message' 
-                label="Solo" 
-                solo 
-                readonly
-                style =" min-width: 500px;"
-                >
-              </v-text-field>
-
-            </v-col>
-          </v-row>
-
-
-          <v-layout >
-
-            <v-flex justify-center>
-              <v-btn class="ma-2" color="indigo" width="170" height="70" v-on:click="start" outlined absolute>[ Start ]</v-btn>
-
-            </v-flex>
-            <v-flex >
-              <v-btn class="ma-2" color="red" width="170" height="70" v-on:click="stop" outlined absolute>[ Stop ]</v-btn>
-
-            </v-flex>
-
+          <div style="height: 20%;"></div>
+          
+          <v-layout row align-center >
+                <v-text-field 
+                  class="centered-input" 
+                  v-model='message' 
+                  label="Solo" 
+                  solo 
+                  readonly>
+                </v-text-field>
           </v-layout>
 
-      </v-container>
-      </v-content>
+          <v-layout row justify-space-between align-center height="100%">
+              <v-spacer></v-spacer>
+              <v-flex sm2 style="min-width: 200px;"> 
+                <v-btn class="ma-2" width="200" height="70" v-on:click="start" outlined absolute color="indigo">[ Start ]</v-btn>
+              </v-flex>
+              <v-spacer></v-spacer>
+            
+              <v-flex sm2 style="min-width: 200px;">
+                <v-btn class="ma-2" width="200" height="70" v-on:click="stop" outlined absolute color="red" >[ Stop ]</v-btn>
+              </v-flex>
+              <v-spacer></v-spacer>
+          </v-layout> 
+
+
+
+        </v-container >
     </v-app>
   </div>
 
