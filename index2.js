@@ -6,6 +6,7 @@ var newest = new Vue({
         message: '00:00',
         interval: '',
         lock: true,
+        toggle: false,
     },
     methods: {
         start() {
@@ -30,10 +31,26 @@ var newest = new Vue({
                 }, 1000);  
             }
             this.lock = false;
+
         },
         stop() {
             clearInterval(this.interval);
+            this.toggle = true;
+        },
+        reset(){
+            console.log("reset");
             this.lock = true;
-        }
+            this.toggle = false;
+            this.message = '00:00';
+        },
+        resume(){
+            console.log("resume");
+            this.lock = true;
+            this.toggle = false;
+            this.start();
+        },
+        lap(){
+            console.log("lap");
+        },
     },
 }); 
